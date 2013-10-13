@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Pieceview</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	</head>
+	<body>
+		<div id="logo"></div>
+		<div id="menu"></div>
+		<div id="main" class="container"></div>
+		<script data-main="modules/main.config" src="assets/js/require.js"></script>
+		<script type="text/javascript">
+			require(['main.app', 'menu/module'], function (MainApp, AppMenu) {
+				var app  = new MainApp();
+				var menu = new AppMenu('#menu');
+				
+				app.applyBinding(menu);
+			});
+		</script>
+	</body>
+</html>
