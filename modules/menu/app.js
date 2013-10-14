@@ -1,6 +1,5 @@
 define(['jquery', 'knockout', 'sammy', 'text!menu/index.html'],
 		function ($, ko, Sammy, template) {
-	$('#menu').html(template);
 	
      return function (el) {
 		var self = this;
@@ -8,32 +7,23 @@ define(['jquery', 'knockout', 'sammy', 'text!menu/index.html'],
 		self.el = el;
 		
 		self.menuData = ko.observable([
-		    { label: 'Home', url: '#home'},
-		    { label: 'Federação', url: '#federacao'},
-		    { label: 'Parceiros', url: '#parceiros'},
-		    { label: 'Mídia', url: '#midia'},
-		    { label: 'Notícias', url: '#noticias'},
-		    { label: 'Calendário', url: '#calendario'},
-		    { label: 'Competições', url: '#competicoes'},
-		    { label: 'Arbitragem', url: '#arbitragem'},
-		    { label: 'TJD', url: '#tjd'},
-		    { label: 'Registro', url: '#registro'},
-		    { label: 'Contato', url: '#contato'}
+		    { label: 'Home', url: 'index.html'},
+		    { label: 'Federação', url: 'federacao.html'},
+		    { label: 'Parceiros', url: 'parceiros.html'},
+		    { label: 'Mídia', url: 'midia.html'},
+		    { label: 'Notícias', url: 'noticias.html'},
+		    { label: 'Calendário', url: 'calendario.html'},
+		    { label: 'Competições', url: 'competicoes.html'},
+		    { label: 'Arbitragem', url: 'arbitragem.html'},
+		    { label: 'TJD', url: 'tjd.html'},
+		    { label: 'Registro', url: 'registro.html'},
+		    { label: 'Contato', url: 'contato.html'}
 		]);
 		
 		self.goToLink = function (data) {
-			location.hash = data.url;
+			location.href = data.url;
 		}
-		
 
-		
-		Sammy(function() {
-			this.get('#home', function () {
-				alert('home');
-			});
-			this.get('#parceiros', function () {
-				alert('hello');
-			});
-	    }).run();
+		$(self.el).html(template);
 	};
 });

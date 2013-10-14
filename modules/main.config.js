@@ -15,25 +15,7 @@ require.config({
 		'sammy': {
 			deps: ['jquery']
 		}
-	} 
-/*,
-	shim: {
-        'backbone': {
-            deps: ['underscore', 'jquery'],
-            exports: 'Backbone'
-        },
-        'underscore': {
-        	deps: ['text'],
-            exports: '_'
-        },
-        'marionette': {
-            deps: ['backbone']
-        },
-        'mainApp': {
-        	deps: ['marionette']
-        }
 	}
-	*/
 });
 
 require(['jquery', 'bootstrap', 'knockout', 'sammy', 'domReady!' ], 

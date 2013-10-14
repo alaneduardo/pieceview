@@ -14,6 +14,9 @@
 			.container {
 				width:80% !important;
 			}
+			.centernews {
+				margin-bottom: 20px;
+			}
 		</style>
 	</head>
 	<body>
@@ -24,11 +27,13 @@
 		<div id="main" class="container"></div>
 		<script data-main="modules/main.config" src="assets/js/require.js"></script>
 		<script type="text/javascript">
-			require(['main.app', 'menu/app'], function (MainApp, Menu) {
+			require(['main.app', 'menu/app', 'newscapa/app'], function (MainApp, Menu, NewsCapa) {
 				var app  = new MainApp();
 				var menu = new Menu('#menu');
+				var capa = new NewsCapa('#main');
 				
 				app.applyBinding(menu);
+				app.applyBinding(capa);
 			});
 		</script>
 	</body>
