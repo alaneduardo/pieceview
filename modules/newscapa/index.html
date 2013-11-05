@@ -1,52 +1,48 @@
 <div class="row-fluid">
-	<div class="span8">
-		<div class="topnews span12" data-bind="with: destaque">
-			<h2><a data-bind="text: titulo ,attr: { href: url, title: titulo }"></a></h2>
-			<p><a data-bind="text: subtitulo ,attr: { href: url, title: titulo }"></a></p>
+	<div class="topnews span12" data-bind="with: destaque">
+		<h2><a data-bind="text: titulo ,attr: { href: url, title: titulo }"></a></h2>
+		<p><a data-bind="text: subtitulo ,attr: { href: url, title: titulo }"></a></p>
+	</div>
+	<div class="centernews row-fluid">
+		<div class="carrosel span6">
 		</div>
-		<div class="centernews row-fluid">
-			<div class="carrosel span6">
+		<div class="sidenews span6" data-bind="with: sidenews">
+			<div class="row-fluid">
+				<cite data-bind="text: destaque.categoria"></cite>
+				<h5><a data-bind="text: destaque.titulo ,attr: { href: destaque.url, title: destaque.titulo }"></a></h5>
+				<p><a data-bind="text: destaque.subtitulo ,attr: { href: destaque.url, title: destaque.titulo }"></a></p>
 			</div>
-			<div class="sidenews span6" data-bind="with: sidenews">
-				<div class="row-fluid">
-					<cite data-bind="text: destaque.categoria"></cite>
-					<h5><a data-bind="text: destaque.titulo ,attr: { href: destaque.url, title: destaque.titulo }"></a></h5>
-					<p><a data-bind="text: destaque.subtitulo ,attr: { href: destaque.url, title: destaque.titulo }"></a></p>
+			<div class="row-fluid">
+				<div class="span6">
+					<cite data-bind="text: esquerda.categoria"></cite>
+					<img data-bind="attr: {src: esquerda.img}" width="150" />
+					<h5><a data-bind="text: esquerda.titulo ,attr: { href: esquerda.url, title: esquerda.titulo }"></a></h5>
+					<p><a data-bind="text: esquerda.subtitulo ,attr: { href: esquerda.url, title: esquerda.titulo }"></a></p>
 				</div>
-				<div class="row-fluid">
-					<div class="span6">
-						<cite data-bind="text: esquerda.categoria"></cite>
-						<img data-bind="attr: {src: esquerda.img}" width="150" />
-						<h5><a data-bind="text: esquerda.titulo ,attr: { href: esquerda.url, title: esquerda.titulo }"></a></h5>
-						<p><a data-bind="text: esquerda.subtitulo ,attr: { href: esquerda.url, title: esquerda.titulo }"></a></p>
-					</div>
-					<div class="span6">
-						<cite data-bind="text: direita.categoria"></cite>
-						<img data-bind="attr: {src: direita.img}" width="150" />
-						<h5><a data-bind="text: direita.titulo ,attr: { href: direita.url, title: direita.titulo }"></a></h5>
-						<p><a data-bind="text: direita.subtitulo ,attr: { href: direita.url, title: direita.titulo }"></a></p>
-					</div>
+				<div class="span6">
+					<cite data-bind="text: direita.categoria"></cite>
+					<img data-bind="attr: {src: direita.img}" width="150" />
+					<h5><a data-bind="text: direita.titulo ,attr: { href: direita.url, title: direita.titulo }"></a></h5>
+					<p><a data-bind="text: direita.subtitulo ,attr: { href: direita.url, title: direita.titulo }"></a></p>
 				</div>
-			</div>
-		</div>
-		<div class="bottomnews row-fluid" data-bind="with: bottomnews">
-			<div class="span4">
-				<cite data-bind="text: esquerda.categoria"></cite>
-				<h5><a data-bind="text: esquerda.titulo ,attr: { href: esquerda.url, title: esquerda.titulo }"></a></h5>
-				<p><a data-bind="text: esquerda.subtitulo ,attr: { href: esquerda.url, title: esquerda.titulo }"></a></p>
-			</div>
-			<div class="span4">
-				<cite data-bind="text: centro.categoria"></cite>
-				<h5><a data-bind="text: centro.titulo ,attr: { href: centro.url, title: centro.titulo }"></a></h5>
-				<p><a data-bind="text: centro.subtitulo ,attr: { href: centro.url, title: centro.titulo }"></a></p>
-			</div>
-			<div class="span4">
-				<cite data-bind="text: direita.categoria"></cite>
-				<h5><a data-bind="text: direita.titulo ,attr: { href: direita.url, title: direita.titulo }"></a></h5>
-				<p><a data-bind="text: direita.subtitulo ,attr: { href: direita.url, title: direita.titulo }"></a></p>
 			</div>
 		</div>
 	</div>
-	<div class="span4">
+	<div class="bottomnews row-fluid" data-bind="with: bottomnews">
+		<div class="span4">
+			<cite data-bind="text: esquerda.categoria"></cite>
+			<h5><a data-bind="text: esquerda.titulo ,attr: { href: esquerda.url, title: esquerda.titulo }"></a></h5>
+			<p><a data-bind="text: esquerda.subtitulo ,attr: { href: esquerda.url, title: esquerda.titulo }"></a></p>
+		</div>
+		<div class="span4">
+			<cite data-bind="text: centro.categoria"></cite>
+			<h5><a data-bind="text: centro.titulo ,attr: { href: centro.url, title: centro.titulo }"></a></h5>
+			<p><a data-bind="text: centro.subtitulo ,attr: { href: centro.url, title: centro.titulo }"></a></p>
+		</div>
+		<div class="span4">
+			<cite data-bind="text: direita.categoria"></cite>
+			<h5><a data-bind="text: direita.titulo ,attr: { href: direita.url, title: direita.titulo }"></a></h5>
+			<p><a data-bind="text: direita.subtitulo ,attr: { href: direita.url, title: direita.titulo }"></a></p>
+		</div>
 	</div>
 </div>

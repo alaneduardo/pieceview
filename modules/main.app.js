@@ -5,5 +5,9 @@ define(['jquery', 'knockout'], function ($, ko) {
 		self.applyBinding = function (obj) {
 			ko.applyBindings(obj, $(obj.el)[0]);
 		}
+		
+		self.getCurrentFile = function () {
+			return window.location.href.replace(/^.*[\/\\]/g, '');
+		}
 	};
 });

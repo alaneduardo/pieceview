@@ -4,37 +4,17 @@
 		<meta charset="UTF-8">
 		<title>Pieceview</title>
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-		<style type="text/css">
-			#logo {
-				margin: 15px auto; 
-			}
-			.navbar-inner {
-				-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;
-			}
-			.container {
-				width:80% !important;
-			}
-			.centernews {
-				margin-bottom: 20px;
-			}
-		</style>
+		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
-		<div id="logo" class="container">
-			<img src="assets/img/logo_ffp.png" />
-		</div>
+		<div id="logo" class="container"></div>
 		<div id="menu"></div>
-		<div id="main" class="container"></div>
+		<div class="container">
+			<div class="row-fluid">
+				<div id="main-left" class="span8"></div>
+				<div id="main-right" class="span4"></div>
+			</div>
+		</div>
 		<script data-main="modules/main.config" src="assets/js/require.js"></script>
-		<script type="text/javascript">
-			require(['main.app', 'menu/app', 'newscapa/app'], function (MainApp, Menu, NewsCapa) {
-				var app  = new MainApp();
-				var menu = new Menu('#menu');
-				var capa = new NewsCapa('#main');
-				
-				app.applyBinding(menu);
-				app.applyBinding(capa);
-			});
-		</script>
 	</body>
 </html>

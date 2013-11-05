@@ -1,5 +1,5 @@
-define(['jquery', 'knockout', 'sammy', 'text!newscapa/index.html'],
-		function ($, ko, Sammy, template) {
+define(['jquery', 'knockout', 'text!newscapa/index.html'],
+		function ($, ko, template) {
 	
      return function (el) {
 		var self = this;
